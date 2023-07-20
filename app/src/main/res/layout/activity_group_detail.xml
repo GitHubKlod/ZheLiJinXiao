@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <include
+        android:id="@+id/titleBar"
+
+        layout="@layout/common_tool_bar"
+
+        />
+
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout
+        android:id="@+id/groupRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/sendCommentLayout"
+        app:layout_constraintTop_toBottomOf="@id/titleBar"
+        >
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@id/sendCommentLayout"
+        app:layout_constraintTop_toBottomOf="@id/titleBar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_12"
+                android:drawablePadding="@dimen/dp_4"
+
+                android:gravity="center_vertical"
+                android:textColor="#ff333333"
+                android:textSize="@dimen/sp_18"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="商家如何入驻浙里金消商家如何入驻浙里金消商家如何入驻浙里金消" />
+
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/upHeader"
+                android:layout_width="@dimen/dp_30"
+                android:layout_height="@dimen/dp_30"
+                android:layout_marginStart="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_15"
+
+                android:src="@mipmap/ic_header_default"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/title"
+                app:round="@dimen/dp_15"
+
+                />
+
+            <TextView
+                android:id="@+id/upName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_5"
+                android:text="浙里金消用户"
+                android:textColor="#ff666666"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintBottom_toBottomOf="@id/upHeader"
+                app:layout_constraintStart_toEndOf="@id/upHeader"
+                app:layout_constraintTop_toTopOf="@id/upHeader"
+
+                />
+
+            <TextView
+                android:id="@+id/upTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_15"
+                android:textColor="#ff999999"
+                android:textSize="@dimen/sp_10"
+                app:layout_constraintBottom_toBottomOf="@id/upHeader"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/upHeader"
+                tools:text="创建于:2023-01-29 15:30:23" />
+
+
+            <TextView
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_10"
+                android:textColor="#ff333333"
+                android:textSize="@dimen/sp_13"
+                app:layout_constraintTop_toBottomOf="@id/upHeader"
+                tools:text="为提振市场信心,释放消费潜力，武义县将于2022年5月16日月30日派发总额1390万元的消费券，其中权重消费券包含汽车、家电消费券各200万元，普惠消费券900万元，数字人民币红包90万元。" />
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/contentImg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_8"
+                app:layout_constraintTop_toBottomOf="@id/content"
+                android:scaleType="center"
+                app:round="@dimen/dp_8" />
+
+            <TextView
+                android:id="@+id/contentData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_10"
+                android:lineSpacingExtra="@dimen/dp_3"
+                android:textColor="#ff5f7793"
+                android:textSize="@dimen/sp_11"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/contentImg"
+                tools:text="1351人关注了圈子\n1.1k浏览 · 48回复 · 45点赞"
+                android:textStyle="bold"
+                />
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_15"
+                android:background="@color/FFF3F3F3"
+                app:layout_constraintTop_toBottomOf="@id/contentData" />
+
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_12"
+                android:text="全部回复"
+                android:textColor="#ff333333"
+                android:textSize="@dimen/sp_15"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/view1"
+                app:layout_constraintTop_toBottomOf="@id/view1" />
+
+            <com.angcyo.tablayout.DslTabLayout
+                android:id="@+id/sortLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_29"
+                android:layout_marginTop="@dimen/dp_6"
+                android:layout_marginEnd="@dimen/dp_15"
+                app:layout_constraintBottom_toBottomOf="@id/tv1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv1"
+                app:tab_border_draw_item_background="false"
+                app:tab_border_radius_size="@dimen/dp_12"
+                app:tab_border_solid_color="@color/FFF3F3F3"
+                app:tab_draw_border="true"
+                app:tab_enable_gradient_color="true"
+                app:tab_indicator_color="@color/white"
+                app:tab_indicator_drawable="@drawable/indicator_round_background_tran"
+                app:tab_indicator_enable_flow="true"
+                app:tab_indicator_height_offset="-6dp"
+                app:tab_indicator_style="STYLE_CENTER"
+                app:tab_indicator_width_offset="-6dp"
+                app:tab_item_is_equ_width="false"
+                android:visibility="invisible"
+                app:tab_select_color="@color/FFE95929">
+
+                <TextView
+                    style="@style/TabCommonItemStyle"
+                    android:paddingVertical="@dimen/dp_3"
+                    android:text="正序" />
+
+                <TextView
+                    style="@style/TabCommonItemStyle"
+                    android:paddingVertical="@dimen/dp_3"
+                    android:text="倒序" />
+
+
+            </com.angcyo.tablayout.DslTabLayout>
+
+
+
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/groupRv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:nestedScrollingEnabled="false"
+                    app:layout_constraintTop_toBottomOf="@id/tv1"
+                    />
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/sendCommentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.hjq.shape.view.ShapeTextView
+            android:id="@+id/sendComment"
+            android:layout_width="@dimen/dp_150"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/dp_10"
+            android:layout_marginStart="@dimen/dp_15"
+            android:paddingHorizontal="@dimen/dp_10"
+            android:paddingVertical="@dimen/dp_8"
+            android:text="发表看法"
+
+            android:textColor="#ff999999"
+            android:textSize="@dimen/sp_13"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+
+            app:layout_constraintStart_toStartOf="parent"
+
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:shape_solidColor="@color/FFF3F3F3"
+            app:shape_radius="@dimen/dp_20"
+            />
+
+        <LinearLayout
+            android:id="@+id/collectBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/sendComment"
+            app:layout_constraintEnd_toStartOf="@id/commentBtn"
+
+            app:layout_constraintTop_toTopOf="parent"
+
+            >
+
+            <ImageView
+                android:id="@+id/collectImg"
+                android:layout_width="@dimen/dp_25"
+                android:layout_height="@dimen/dp_25"
+                android:scaleType="fitXY"
+                android:src="@mipmap/icon_article_collect" />
+
+            <TextView
+                android:id="@+id/collectCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_5"
+                android:textColor="@color/FF999999"
+                android:textSize="@dimen/sp_13"
+                tools:text="41" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/commentBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/collectBtn"
+            app:layout_constraintEnd_toStartOf="@id/zanBtn"
+            app:layout_constraintTop_toTopOf="parent"
+
+            >
+
+            <ImageView
+                android:id="@+id/commentImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_article_comment" />
+
+            <TextView
+                android:id="@+id/commentCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_5"
+                android:textColor="@color/FF999999"
+                android:textSize="@dimen/sp_13"
+                tools:text="41" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/zanBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/commentBtn"
+
+            >
+
+            <ImageView
+                android:id="@+id/zanImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_article_zan" />
+
+            <TextView
+                android:id="@+id/zanCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_5"
+                android:textColor="@color/FF999999"
+                android:textSize="@dimen/sp_13"
+                tools:text="41" />
+
+
+        </LinearLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

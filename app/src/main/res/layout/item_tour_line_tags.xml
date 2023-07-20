@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/dp_2">
+
+
+    <com.hjq.shape.view.ShapeTextView
+        android:id="@+id/tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/dp_2"
+        android:paddingVertical="@dimen/dp_1"
+        android:textColor="#ffe95929"
+        android:textSize="@dimen/sp_11"
+        app:shape_solidColor="#FFEAE3"
+        app:shape_strokeColor="@color/FFE95929"
+        app:shape_strokeWidth="@dimen/dp_0_5"
+        tools:text="周边小游" />
+</FrameLayout>

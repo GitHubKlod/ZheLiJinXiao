@@ -1,0 +1,54 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+        jcenter()
+    }
+    plugins {
+        id 'com.android.application' version '7.4.1' apply false
+        id 'com.android.library' version '7.4.1' apply false
+        id 'org.jetbrains.kotlin.android' version '1.6.21' apply false
+    }
+
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+
+        // JitPack 远程仓库：https://jitpack.io
+        maven { url 'https://jitpack.io' }
+
+        google()
+        mavenCentral()
+        jcenter()
+    }
+
+}
+
+//
+//pluginManagement {//插件管理
+//    repositories {//搜索或下载Gradle插件的仓库依赖
+//        gradlePluginPortal()
+//        google()//Google's Maven repository
+//        mavenCentral()//Maven Central Repository
+//    }
+//}
+//dependencyResolutionManagement {//依赖项解析管理
+//    /**
+//     * 存储库模式：
+//     * PREFER_PROJECT --首选项目远程仓库
+//     * PREFER_SETTINGS--首选settings远程仓库
+//     * FAIL_ON_PROJECT_REPOS--强制settings远程仓库
+//     */
+//    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)//设置存储库的方法
+//    repositories {
+//        google()//Google's Maven repository
+//        mavenCentral()//Maven Central Repository
+//    }
+//}
+rootProject.name = "ZheLiJinXiao"
+include ':app'
+include ':KlodBaseModule'
+include ':easyPhotos'
+include ':aarModule'

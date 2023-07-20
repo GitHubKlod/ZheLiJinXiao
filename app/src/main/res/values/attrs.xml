@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<!--    弹窗动画-->
+    <style mce_bogus="1" name="picker_view_slide_anim" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/pickerview_slide_in_bottom</item>
+        <item name="android:windowExitAnimation">@anim/pickerview_slide_out_bottom</item>
+    </style>
+
+<!--    圆形 边框 ImageView-->
+    <declare-styleable name="CornerImageView">
+        <attr name="radiusYL" format="dimension">圆角半径</attr>
+        <attr name="topLeftRadiusYL" format="dimension">左上</attr>
+        <attr name="topRightRadiusYL" format="dimension">右上</attr>
+        <attr name="bottomLeftRadiusYL" format="dimension">左下</attr>
+        <attr name="bottomRightRadiusYL" format="dimension">右下</attr>
+
+        <attr name="topLeftRadius_xYL" format="dimension">左上X轴</attr>
+        <attr name="topLeftRadius_yYL" format="dimension">左上Y轴</attr>
+
+        <attr name="topRightRadius_xYL" format="dimension">右上X轴</attr>
+        <attr name="topRightRadius_yYL" format="dimension">右上Y轴</attr>
+
+        <attr name="bottomLeftRadius_xYL" format="dimension">左下X轴</attr>
+        <attr name="bottomLeftRadius_yYL" format="dimension">左下Y轴</attr>
+
+        <attr name="bottomRightRadius_xYL" format="dimension">右下X轴</attr>
+        <attr name="bottomRightRadius_yYL" format="dimension">右下Y轴</attr>
+
+        <attr name="borderWidthYL" format="dimension">描边宽度</attr>
+        <attr name="borderColorYL" format="color">描边颜色</attr>
+        <attr name="borderSpaceYL" format="dimension">描边与图片间距</attr>
+
+        <!-- 无论是什么展示形式，都会填充满整个控件，如果不想填充满，自己去改onDraw里面的 dst -->
+        <attr name="scaleTypeYL" format="enum">
+            <enum name="top" value="0">从图片顶部开始绘制，即肯定会展示图片顶部，默认</enum>
+            <enum name="center" value="1">展示图片中心</enum>
+            <enum name="bottom" value="2">从图片底部开始绘制，即肯定会展示图片底部</enum>
+            <enum name="fitXY" value="3">完全展示，有可能变形</enum>
+            <enum name="centerCrop" value="4">完全展示,有可能变形</enum>
+        </attr>
+    </declare-styleable>
+
+<!--    隐私政策 文案 变色点击事件 TV-->
+    <declare-styleable name="MultiLinkTextView">
+        <attr name="linkColor1" format="reference" />
+        <attr name="linkColor2" format="reference" />
+        <attr name="linkColor3" format="reference" />
+        <attr name="linkColor4" format="reference" />
+        <attr name="link1" format="string" />
+        <attr name="link2" format="string" />
+        <attr name="link3" format="string" />
+        <attr name="link4" format="string" />
+        <attr name="multi_showUnderline" format="boolean" />
+    </declare-styleable>
+
+<!--    DSLTabLayout Tab Style-->
+    <style name="TabItemStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:textColor">#FFF</item>
+    </style>
+
+    <style name="TabSlidingItemStyle" parent="TabItemStyle">
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+    </style>
+
+    <style name="TabCommonItemStyle" parent="TabItemStyle">
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+    </style>
+
+    <style name="TabVerticalItemStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">20dp</item>
+        <item name="android:paddingBottom">20dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+
+    <style name="TabHorizontalItemStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+
+    <declare-styleable name="KeyValueLayout">
+        <attr name="klod_key" format="string"/>
+        <attr name="klod_value" format="string"/>
+        <attr name="klod_key_color" format="color"/>
+        <attr name="klod_value_color" format="color"/>
+        <attr name="klod_key_size" format="dimension"/>
+        <attr name="klod_value_size" format="dimension"/>
+    </declare-styleable>
+
+</resources>

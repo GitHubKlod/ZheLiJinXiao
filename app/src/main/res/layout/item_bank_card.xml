@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/common_ffffff_3"
+    android:layout_marginTop="@dimen/dp_10"
+    android:layout_marginHorizontal="@dimen/dp_15"
+    android:layout_height="@dimen/dp_100"
+    app:shape_radius="@dimen/dp_3"
+    >
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/bankImg"
+        app:round="3dp"
+
+        />
+
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/bankIcon"
+        android:layout_width="@dimen/dp_30"
+        android:layout_height="@dimen/dp_30"
+        app:round="@dimen/dp_15"
+        tools:src="@color/black"
+        android:background="@color/white"
+        android:padding="@dimen/dp_3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_marginStart="@dimen/dp_20"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="建设银行"
+        android:textColor="#ffffffff"
+        android:textSize="@dimen/sp_14"
+       app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/dp_13"
+        app:layout_constraintStart_toEndOf="@id/bankIcon"
+        android:layout_marginStart="@dimen/dp_10"
+        android:id="@+id/bankName"
+        android:textStyle="bold"
+        android:includeFontPadding="false"
+        />
+
+    <TextView
+        android:id="@+id/cardType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="储蓄卡"
+        android:textColor="#ffffffff"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintTop_toBottomOf="@id/bankName"
+        app:layout_constraintStart_toStartOf="@id/bankName"
+
+        />
+
+
+    <com.hjq.shape.view.ShapeTextView
+        android:id="@+id/unbindCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="解绑"
+        android:textColor="#ff333333"
+        android:textSize="@dimen/sp_13"
+        android:paddingVertical="@dimen/dp_3"
+        android:paddingHorizontal="@dimen/dp_10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/bankIcon"
+        app:layout_constraintBottom_toBottomOf="@id/bankIcon"
+        android:layout_marginEnd="@dimen/dp_16"
+        app:shape_solidColor="@color/white"
+        app:shape_radius="@dimen/dp_3"
+        />
+
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="● ● ● ●       ● ● ● ●       ● ● ● ●"
+        android:textColor="#ffffffff"
+        android:textSize="@dimen/sp_10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bankIcon"
+        android:layout_marginStart="@dimen/dp_20"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+
+    <TextView
+        android:id="@+id/cardNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="6589"
+        android:textColor="#ffffffff"
+        android:textSize="@dimen/sp_18"
+        app:layout_constraintTop_toTopOf="@id/tv1"
+        app:layout_constraintBottom_toBottomOf="@id/tv1"
+        app:layout_constraintStart_toEndOf="@id/tv1"
+        android:textStyle="bold"
+        android:layout_marginStart="@dimen/dp_19"
+        />
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

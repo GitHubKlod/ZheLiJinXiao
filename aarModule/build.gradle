@@ -1,0 +1,7 @@
+configurations.maybeCreate("default")
+artifacts.add("default", file('AMap2DMap_6.0.0_AMapSearch_9.5.0_AMapLocation_6.3.0_20230410.aar'))
+//artifacts.add("default", file("umeng-asms-armeabi-v1.2.2.aar"))
+//artifacts.add("default", file("umeng-uverify-2.5.1.aar"))
+//artifacts.add("default", file("umeng-crashshield-2.0.3.aar"))
+//artifacts.add("default", file("umeng-logger-2.0.3.aar"))
+//artifacts.add(

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+<!--    <external-path name="external_storage_root" path="." />-->
+<!--    <external-path name="external" path="."/>-->
+<!--    <external-files-path path="/download" name="download"/>-->
+<!--    <external-files-path path="/Download" name="Download"/>-->
+    <!--表示 content.getFileDir() 获取到的目录 path:目录下的image文件夹-->
+    <files-path
+        name="file_path"
+        path="image"
+        />
+    <files-path
+        name="apk"
+        path="apk"
+        />
+<!--    <root-path-->
+<!--        name="root"-->
+<!--        path=""/>-->
+
+    <!-- 这个是保存拍照图片的路径,必须配置。 -->
+<!--    <external-path-->
+<!--        name="images"-->
+<!--        path="Pictures" />-->
+<!--    <external-path name="tt_external_root" path="." />-->
+<!--    <external-path name="tt_external_download" path="Download" />-->
+<!--    <external-files-path name="tt_external_files_download" path="Download" />-->
+<!--    <files-path name="tt_internal_file_download" path="Download" />-->
+<!--    <cache-path name="tt_internal_cache_download" path="Download" />-->
+</paths>

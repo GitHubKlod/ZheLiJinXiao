@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <include
+        android:id="@+id/titleBar"
+        layout="@layout/common_tool_bar" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_14"
+        android:layout_marginTop="@dimen/dp_25"
+        android:text="如需更换手机号，请点击下方按钮联系客服处理"
+        android:textStyle="bold"
+        android:textColor="#ffe95929"
+        android:textSize="@dimen/sp_14" />
+
+
+    <com.hjq.shape.layout.ShapeLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_14"
+        android:layout_marginTop="@dimen/dp_18"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/dp_14"
+        android:paddingBottom="@dimen/dp_14"
+        app:shape_radius="@dimen/dp_8"
+        app:shape_solidColor="@color/FFFFF2EC">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_16"
+            android:text="注意事项："
+            android:textColor="#ff333333"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="① 客服受理时间:每周一至周六 8:00-20:00"
+            android:layout_marginTop="@dimen/dp_15"
+            android:textColor="#ff666666"
+            android:textSize="@dimen/sp_13" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="② 需要提供未在“浙里金消”注册过的手机号码 "
+          android:layout_marginTop="@dimen/dp_3"
+            android:textColor="#ff666666"
+            android:textSize="@dimen/sp_13" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="③ 更换成功后，请使用新的手机号登录“浙里金消"
+            android:layout_marginTop="@dimen/dp_3"
+            android:textColor="#ff666666"
+            android:textSize="@dimen/sp_13" />
+    </com.hjq.shape.layout.ShapeLinearLayout>
+
+    <com.hjq.shape.view.ShapeTextView
+        android:id="@+id/callService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="联系客服"
+        android:textColor="#ffffffff"
+        android:textSize="@dimen/sp_18"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/dp_60"
+        android:paddingVertical="@dimen/dp_13"
+        android:layout_marginHorizontal="@dimen/dp_50"
+        app:shape_radius="@dimen/dp_30"
+        app:shape_solidColor="@color/FFE95929"
+
+        />
+
+</LinearLayout>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <com.youth.banner.Banner
+        android:id="@+id/bannerTop"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+
+        android:layout_marginTop="@dimen/dp_13"
+        app:layout_constraintTop_toTopOf="parent"
+
+
+        app:banner_indicator_selected_color="#FFFFFFFF"
+        app:banner_indicator_normal_color="#88ffffff"
+        />
+
+    <!--    政府券 商惠券 抢红包等顶部导航-->
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_18"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/bannerTop">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/gridRv"
+            />
+
+<!--        <TextView-->
+<!--            android:id="@+id/govCoupon"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="@dimen/dp_10"-->
+<!--            android:layout_weight="1"-->
+<!--            android:drawablePadding="@dimen/dp_8"-->
+<!--            android:gravity="center"-->
+<!--            android:text="政府券"-->
+<!--            android:textColor="#ff666666"-->
+<!--            android:textSize="13sp"-->
+<!--            app:drawableTopCompat="@mipmap/icon_activity_ic1" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/businessCoupon"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:drawablePadding="@dimen/dp_8"-->
+<!--            android:gravity="center"-->
+<!--            android:text="商惠券"-->
+<!--            android:textColor="#ff666666"-->
+<!--            android:textSize="13sp"-->
+<!--            app:drawableTopCompat="@mipmap/icon_activity_ic2" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/redPackCoupon"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:drawablePadding="@dimen/dp_8"-->
+<!--            android:gravity="center"-->
+<!--            android:text="抢红包"-->
+<!--            android:textColor="#ff666666"-->
+<!--            android:textSize="13sp"-->
+<!--            app:drawableTopCompat="@mipmap/icon_activity_ic3" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/subsidyCoupon"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:drawablePadding="@dimen/dp_8"-->
+<!--            android:gravity="center"-->
+<!--            android:text="享补贴"-->
+<!--            android:textColor="#ff666666"-->
+<!--            android:textSize="13sp"-->
+<!--            app:drawableTopCompat="@mipmap/icon_activity_ic4" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/groupCoupon"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginEnd="@dimen/dp_10"-->
+<!--            android:layout_weight="1"-->
+<!--            android:drawablePadding="@dimen/dp_8"-->
+<!--            android:gravity="center"-->
+<!--            android:text="活动圈"-->
+<!--            android:textColor="#ff666666"-->
+<!--            android:textSize="13sp"-->
+
+<!--            app:drawableTopCompat="@mipmap/icon_activity_ic5" />-->
+
+    </LinearLayout>
+
+
+<!--    <ImageView-->
+<!--        android:id="@+id/inclusiveCoupon"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="@dimen/dp_10"-->
+<!--        -->
+<!--        android:layout_marginTop="@dimen/dp_23"-->
+<!--        android:src="@mipmap/icon_activity_inclusive"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/ll1"-->
+<!--        app:layout_constraintEnd_toStartOf="@id/guideline2"-->
+<!--        />-->
+    <FrameLayout
+        android:id="@+id/img1Fl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/ll1">
+
+        <ImageView
+            android:id="@+id/image1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_10"
+            android:adjustViewBounds="true"
+            tools:src="@mipmap/icon_activity_tour"
+
+            />
+    </FrameLayout>
+
+
+
+
+    <com.youth.banner.Banner
+        android:id="@+id/bannerCenter"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_marginTop="@dimen/dp_13"
+        app:layout_constraintTop_toBottomOf="@id/img1Fl"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

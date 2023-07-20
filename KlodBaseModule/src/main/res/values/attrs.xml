@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 仿 ios 开关按钮 -->
+    <declare-styleable name="SwitchButton">
+        <!-- 是否选中 -->
+        <attr name="android:checked" />
+        <!-- 是否禁用 -->
+        <attr name="android:enabled" />
+<!--        颜色-->
+        <attr name="android:color" />
+    </declare-styleable>
+
+    <!-- 正则表达式编辑框 -->
+<!--    <declare-styleable name="RegexEditText">-->
+<!--        &lt;!&ndash; 正则输入限制 &ndash;&gt;-->
+<!--        <attr name="inputRegex" format="string" />-->
+<!--        &lt;!&ndash; 常用正则类型 &ndash;&gt;-->
+<!--        <attr name="regexType" >-->
+<!--            &lt;!&ndash; 手机号（只能以 1 开头） &ndash;&gt;-->
+<!--            <enum name="mobile" value="0x01" />-->
+<!--            &lt;!&ndash; 中文（普通的中文字符） &ndash;&gt;-->
+<!--            <enum name="chinese" value="0x02" />-->
+<!--            &lt;!&ndash; 英文（大写和小写的英文） &ndash;&gt;-->
+<!--            <enum name="english" value="0x03" />-->
+<!--            &lt;!&ndash; 整数（非 0 开头的数字） &ndash;&gt;-->
+<!--            <enum name="count" value="0x04" />-->
+<!--            &lt;!&ndash; 用户名（中文、英文、数字） &ndash;&gt;-->
+<!--            <enum name="name" value="0x05" />-->
+<!--            &lt;!&ndash; 非空格字符 &ndash;&gt;-->
+<!--            <enum name="nonnull" value="0x06" />-->
+<!--        </attr>-->
+<!--    </declare-styleable>-->
+
+<!--    &lt;!&ndash; 设置栏 &ndash;&gt;-->
+<!--    <declare-styleable name="SettingBar">-->
+<!--        &lt;!&ndash; 左边 &ndash;&gt;-->
+<!--        <attr name="bar_leftText" format="string"/>-->
+<!--        <attr name="bar_leftHint" format="string"/>-->
+<!--        <attr name="bar_leftIcon" format="reference" />-->
+<!--        <attr name="bar_leftColor" format="color" />-->
+<!--        <attr name="bar_leftSize" format="dimension" />-->
+<!--        &lt;!&ndash; 右边 &ndash;&gt;-->
+<!--        <attr name="bar_rightText" format="string" />-->
+<!--        <attr name="bar_rightHint" format="string"/>-->
+<!--        <attr name="bar_rightIcon" format="reference" />-->
+<!--        <attr name="bar_rightColor" format="color" />-->
+<!--        <attr name="bar_rightSize" format="dimension" />-->
+<!--        &lt;!&ndash; 分割线 &ndash;&gt;-->
+<!--        <attr name="bar_lineVisible" format="boolean" />-->
+<!--        <attr name="bar_lineColor" format="reference|color" />-->
+<!--        <attr name="bar_lineSize" format="dimension" />-->
+<!--        <attr name="bar_lineMargin" format="dimension" />-->
+<!--    </declare-styleable>-->
+
+<!--    &lt;!&ndash; 自定义 ViewStub &ndash;&gt;-->
+<!--    <declare-styleable name="CustomViewStub">-->
+<!--        &lt;!&ndash; 布局 id &ndash;&gt;-->
+<!--        <attr name="android:layout" />-->
+<!--    </declare-styleable>-->
+
+<!--    &lt;!&ndash; 缩放的 ImageView &ndash;&gt;-->
+<!--    <declare-styleable name="ScaleImageView">-->
+<!--        &lt;!&ndash; 缩放比例 &ndash;&gt;-->
+<!--        <attr name="scaleRatio" format="float" />-->
+<!--    </declare-styleable>-->
+
+<!--    &lt;!&ndash; 按照比例显示的 FrameLayout &ndash;&gt;-->
+<!--    <declare-styleable name="RatioFrameLayout">-->
+<!--        &lt;!&ndash; 宽高比例 &ndash;&gt;-->
+<!--        <attr name="sizeRatio" format="float" />-->
+<!--    </declare-styleable>-->
+
+</resources>

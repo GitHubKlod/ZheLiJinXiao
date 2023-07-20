@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/homeFragment1">
+
+    <fragment
+        android:id="@+id/homeFragment1"
+        android:name="com.zhili.zljx.ui.home.consume.ConsumeFragment"
+        android:label="@string/home_title_tab1"
+        tools:layout="@layout/fragment_consume">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeFragment2"
+        android:name="com.zhili.zljx.ui.home.exhibition.ExhibitionFragment"
+        android:label="@string/home_title_tab2"
+        tools:layout="@layout/fragment_exhibition" />
+
+    <fragment
+        android:id="@+id/homeFragment3"
+        android:name="com.zhili.zljx.ui.home.activity.ActivityFragment"
+        android:label="@string/home_title_tab3"
+        tools:layout="@layout/fragment_activity" />
+
+    <fragment
+        android:id="@+id/homeFragment4"
+        android:name="com.zhili.zljx.ui.home.message.MessageFragment"
+        android:label="@string/home_title_tab4"
+        tools:layout="@layout/fragment_message" />
+
+    <fragment
+        android:id="@+id/homeFragment5"
+        android:name="com.zhili.zljx.ui.home.mine.MineFragment"
+        android:label="@string/home_title_tab5"
+        tools:layout="@layout/fragment_mine" />
+</navigation>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_9"
+        android:layout_marginTop="@dimen/dp_17"
+        android:text="活动圈"
+        android:textColor="#ff333333"
+        android:textSize="@dimen/sp_15"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_5"
+        android:text="打造共同话题的圈子"
+        android:textColor="#ff999999"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintBottom_toBottomOf="@id/tv1"
+        app:layout_constraintStart_toEndOf="@id/tv1"
+        app:layout_constraintTop_toTopOf="@id/tv1" />
+
+    <TextView
+        android:id="@+id/groupMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_19"
+        android:gravity="center"
+        android:text="更多圈子"
+        android:textColor="#ff999999"
+        android:textSize="12sp"
+        app:drawableEndCompat="@mipmap/icon_more"
+        app:layout_constraintBottom_toBottomOf="@id/tv1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv1" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/groupRv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_5"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/tv1"
+        tools:itemCount="3"
+        tools:listitem="@layout/item_activity_group" />
+
+    <com.youth.banner.Banner
+        android:id="@+id/groupBanner"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_100"
+        app:layout_constraintTop_toBottomOf="@id/groupRv"
+        android:layout_marginHorizontal="@dimen/dp_14"
+        android:layout_marginTop="@dimen/dp_16"
+        />
+    
+    
+</androidx.constraintlayout.widget.ConstraintLayout>

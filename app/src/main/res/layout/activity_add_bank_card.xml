@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activityBackground"
+    android:orientation="vertical">
+
+
+    <include
+
+        android:id="@+id/titleBar"
+        layout="@layout/common_tool_bar" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_12"
+        android:background="@color/white"
+        android:paddingHorizontal="@dimen/dp_14"
+        android:paddingVertical="@dimen/dp_10"
+        android:text="*核对您的身份信息"
+        android:textColor="#ffff2121"
+        android:textSize="13sp"
+
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/dp_14"
+        android:paddingVertical="@dimen/dp_5">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="真实姓名"
+            android:textColor="#ff666666"
+            android:textSize="@dimen/sp_14" />
+
+
+        <com.hjq.shape.view.ShapeEditText
+            android:id="@+id/nameEt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="end|center_vertical"
+            android:hint="请输入真实姓名"
+            android:textColor="#ff333333"
+            android:textColorHint="@color/FF999999"
+            android:textSize="@dimen/sp_14" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/dp_14"
+        android:paddingVertical="@dimen/dp_5">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="身份证号"
+            android:textColor="#ff666666"
+            android:textSize="@dimen/sp_14" />
+
+
+        <com.hjq.shape.view.ShapeEditText
+            android:id="@+id/idCardEt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="end|center_vertical"
+            android:hint="请输入身份证号码"
+            android:maxLength="18"
+            android:digits="1234567890xX"
+            android:textColor="#ff333333"
+            android:textColorHint="@color/FF999999"
+            android:textSize="@dimen/sp_14" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_12"
+        android:background="@color/white"
+        android:paddingHorizontal="@dimen/dp_14"
+        android:paddingVertical="@dimen/dp_10"
+        android:text="*输入您的银行卡信息"
+        android:textColor="#ffff2121"
+        android:textSize="13sp"
+
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/dp_14"
+        android:paddingVertical="@dimen/dp_5">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="银行卡号"
+            android:textColor="#ff666666"
+            android:textSize="@dimen/sp_14" />
+
+
+        <com.hjq.shape.view.ShapeEditText
+            android:id="@+id/bankCardEt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="end|center_vertical"
+            android:hint="请输入银行卡号"
+            android:textColor="#ff333333"
+            android:textColorHint="@color/FF999999"
+            android:textSize="@dimen/sp_14" />
+
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bankSelectCl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="@dimen/dp_8">
+
+        <TextView
+            android:id="@+id/tv3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_14"
+            android:layout_marginTop="@dimen/dp_13"
+            android:text="所属银行"
+            android:textColor="#ff666666"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/bankTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_12"
+            android:hint="请选择开户银行"
+            android:minWidth="0dp"
+            android:maxWidth="300dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="#ff333333"
+            android:textColorHint="@color/FF999999"
+            android:textSize="@dimen/sp_14"
+            app:drawableEndCompat="@mipmap/icon_more_48"
+            app:drawableTint="@color/FF999999"
+
+            app:layout_constraintBottom_toBottomOf="@id/tv3"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv3" />
+
+        <ImageView
+            android:id="@+id/bankLittleIcon"
+            android:layout_width="@dimen/dp_16"
+            android:layout_height="@dimen/dp_16"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="@id/bankTv"
+            app:layout_constraintEnd_toStartOf="@id/bankTv"
+            app:layout_constraintTop_toTopOf="@id/bankTv" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/citySelectCl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="@dimen/dp_8">
+
+        <TextView
+            android:id="@+id/tv4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_14"
+            android:layout_marginTop="@dimen/dp_13"
+            android:text="开户省市"
+            android:textColor="#ff666666"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/cityTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_12"
+            android:gravity="end|center_vertical"
+            android:hint="请选择省市"
+            android:textColor="#ff333333"
+            android:textColorHint="@color/FF999999"
+            android:textSize="@dimen/sp_14"
+            app:drawableEndCompat="@mipmap/icon_more_48"
+            app:drawableTint="@color/FF999999"
+
+            app:layout_constraintBottom_toBottomOf="@id/tv4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv4"
+            app:layout_constraintTop_toTopOf="@id/tv4" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/dp_14"
+        android:paddingVertical="@dimen/dp_5">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="手机号码"
+            android:textColor="#ff666666"
+            android:textSize="@dimen/sp_14" />
+
+
+        <com.hjq.shape.view.ShapeEditText
+            android:id="@+id/phoneEt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="end|center_vertical"
+            android:hint="请输入手机号码"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:textColor="#ff333333"
+            android:textColorHint="@color/FF999999"
+            android:textSize="@dimen/sp_14" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/dp_14"
+        android:paddingVertical="@dimen/dp_5">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="验证码"
+            android:textColor="#ff666666"
+            android:textSize="@dimen/sp_14" />
+
+
+        <com.hjq.shape.view.ShapeEditText
+            android:id="@+id/codeEt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_8"
+            android:layout_weight="1"
+            android:gravity="end|center_vertical"
+            android:hint="请输入验证码"
+            android:inputType="number"
+            android:maxLength="6"
+            android:textColor="#ff333333"
+            android:textColorHint="@color/FF999999"
+            android:textSize="@dimen/sp_14" />
+
+        <com.zhili.zljx.widget.view.CountDownView
+            android:id="@+id/getSmsCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_send_code"
+            android:minHeight="0dp"
+            android:paddingHorizontal="@dimen/dp_10"
+            android:paddingVertical="@dimen/dp_3"
+            android:text="获取验证码"
+            android:textColor="#ffffffff"
+            android:textSize="12sp" />
+
+
+    </LinearLayout>
+
+    <com.hjq.shape.view.ShapeTextView
+        android:id="@+id/submitBankCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_50"
+        android:layout_marginTop="@dimen/dp_20"
+        android:gravity="center"
+        android:paddingVertical="@dimen/dp_10"
+        android:text="确认绑卡"
+        android:textColor="#ffffffff"
+        android:textSize="@dimen/sp_18"
+        app:shape_radius="@dimen/dp_30"
+        app:shape_solidColor="@color/FFE95929" />
+
+
+</LinearLayout>

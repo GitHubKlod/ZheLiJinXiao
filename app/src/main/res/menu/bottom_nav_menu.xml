@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/homeFragment1"
+        android:icon="@drawable/home_bnv_tab1"
+        android:title="@string/home_title_tab1" />
+
+    <item
+        android:id="@+id/homeFragment2"
+        android:icon="@drawable/home_bnv_tab2"
+        android:title="@string/home_title_tab2" />
+
+    <item
+        android:id="@+id/homeFragment3"
+        android:icon="@null"
+        android:title="@string/home_title_tab3" />
+    <item
+        android:id="@+id/homeFragment4"
+        android:icon="@drawable/home_bnv_tab4"
+        android:title="@string/home_title_tab4" />
+
+    <item
+        android:id="@+id/homeFragment5"
+        android:icon="@drawable/home_bnv_tab5"
+        android:title="@string/home_title_tab5" />
+
+</menu>

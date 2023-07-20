@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/titleBar"
+        layout="@layout/common_tool_bar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <com.zhili.zljx.widget.view.KeyValueLayout
+                android:id="@+id/updateVersion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingHorizontal="@dimen/dp_6"
+                android:paddingVertical="@dimen/dp_8"
+                app:klod_key="检测更新"
+                app:klod_key_color="@color/FF333333"
+                app:klod_key_size="@dimen/sp_14"
+                app:klod_value=">"
+                app:klod_value_color="@color/FF999999"
+                app:klod_value_size="@dimen/sp_14"
+                app:layout_constraintTop_toBottomOf="@id/titleBar" />
+
+
+            <com.zhili.zljx.widget.view.KeyValueLayout
+                android:id="@+id/callService"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingHorizontal="@dimen/dp_6"
+                android:paddingVertical="@dimen/dp_8"
+                app:klod_key="客服电话"
+                app:klod_key_color="@color/FF333333"
+                app:klod_key_size="@dimen/sp_14"
+                app:klod_value=""
+                app:klod_value_color="@color/FF999999"
+                app:klod_value_size="@dimen/sp_14"
+                app:layout_constraintTop_toBottomOf="@id/titleBar" />
+
+
+            <com.zhili.zljx.widget.view.KeyValueLayout
+                android:id="@+id/userPolicy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingHorizontal="@dimen/dp_6"
+                android:paddingVertical="@dimen/dp_8"
+                app:klod_key="用户协议"
+                app:klod_key_color="@color/FF333333"
+                app:klod_key_size="@dimen/sp_14"
+                app:klod_value=""
+                app:klod_value_color="@color/FF333333"
+                app:klod_value_size="@dimen/sp_14"
+                app:layout_constraintTop_toBottomOf="@id/titleBar" />
+
+
+            <com.zhili.zljx.widget.view.KeyValueLayout
+                android:id="@+id/privatePolicy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingHorizontal="@dimen/dp_6"
+                android:paddingVertical="@dimen/dp_8"
+                app:klod_key="隐私政策"
+                app:klod_key_color="@color/FF333333"
+                app:klod_key_size="@dimen/sp_14"
+                app:klod_value=""
+                app:klod_value_color="@color/FF333333"
+                app:klod_value_size="@dimen/sp_14"
+                app:layout_constraintTop_toBottomOf="@id/titleBar" />
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

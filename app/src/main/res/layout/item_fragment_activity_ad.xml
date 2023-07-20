@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/adImg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_90"
+        app:round="@dimen/dp_5"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginHorizontal="@dimen/dp_12"
+        tools:src="@mipmap/img_load_error"
+        android:scaleType="fitXY"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

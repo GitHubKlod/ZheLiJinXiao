@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/rootCl"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_14"
+        android:layout_marginTop="@dimen/dp_28"
+        android:text="政府券"
+        android:textColor="#ff333333"
+        android:textSize="@dimen/sp_16"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+
+    <TextView
+        android:id="@+id/govCouponMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_19"
+        android:gravity="center"
+        android:text="更多"
+        android:textColor="#ff999999"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/tv1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv1"
+        app:drawableEndCompat="@mipmap/icon_more"
+        app:drawableTint="@color/FF999999" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/govCouponRv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginHorizontal="@dimen/dp_6"
+
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/tv1"
+        app:spanCount="2"
+        tools:itemCount="4"
+        tools:listitem="@layout/item_activity_govcoupon_small" />
+
+    
+    <com.youth.banner.Banner
+        android:id="@+id/govCouponBanner"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_100"
+        android:layout_marginHorizontal="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_23"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/govCouponRv"
+        />
+    
+
+</androidx.constraintlayout.widget.ConstraintLayout>
