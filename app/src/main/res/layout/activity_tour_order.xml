@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/titleBar"
+        layout="@layout/common_tool_bar" />
+
+    <com.angcyo.tablayout.DslTabLayout
+        android:id="@+id/dslTab"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:background="@color/white"
+        android:paddingBottom="8dp"
+        app:layout_constraintTop_toBottomOf="@id/titleBar"
+        app:tab_deselect_color="@color/FF666666"
+        app:tab_draw_indicator="true"
+        app:tab_enable_text_bold="true"
+
+
+        app:tab_indicator_color="@color/FFE95929"
+        app:tab_indicator_drawable="@drawable/common_ffffff_8"
+        app:tab_indicator_enable_flow="true"
+        app:tab_indicator_height="4dp"
+        app:tab_indicator_style="STYLE_BOTTOM"
+        app:tab_indicator_width="25dp"
+
+        app:tab_item_auto_equ_width="true"
+        app:tab_select_color="@color/FFE95929">
+
+        <TextView
+            style="@style/TabCommonItemStyle"
+            android:layout_marginHorizontal="10dp"
+            android:text="全部" />
+
+        <TextView
+            style="@style/TabCommonItemStyle"
+            android:layout_marginHorizontal="10dp"
+            android:text="待支付" />
+
+        <TextView
+            style="@style/TabCommonItemStyle"
+            android:layout_marginHorizontal="10dp"
+            android:text="已取消" />
+
+        <TextView
+            style="@style/TabCommonItemStyle"
+            android:layout_marginHorizontal="10dp"
+            android:text="已支付" />
+
+    </com.angcyo.tablayout.DslTabLayout>
+
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/dslVp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dslTab" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/img_splash"
+
+
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#77000000"
+        android:visibility="visible"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_33"
+        android:background="@drawable/common_ffffff_8"
+        android:paddingBottom="@dimen/dp_20"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="visible"
+
+        >
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_17"
+            android:text="用户协议及隐私政策"
+            android:textColor="#ff333333"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.zhili.zljx.widget.view.MultiLinkTextView
+            android:id="@+id/register_agreement_dialog_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_13"
+            android:layout_marginTop="@dimen/dp_17"
+            android:layout_marginEnd="@dimen/dp_13"
+            android:lineSpacingExtra="3dp"
+            android:text="@string/register_agreement_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_13"
+            app:layout_constraintTop_toBottomOf="@id/tv1"
+            app:link1="@string/register_agreement_1"
+            app:link2="@string/register_agreement_2"
+            app:link3="@string/register_agreement_3"
+
+            app:linkColor1="@color/FFE95929"
+            app:linkColor2="@color/FFE95929"
+            app:linkColor3="@color/FF999999"
+            app:multi_showUnderline="false" />
+
+        <com.hjq.shape.view.ShapeTextView
+            android:id="@+id/register_agreement_dialog_ok"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/register_agreement_dialog_cancel"
+            app:layout_constraintTop_toBottomOf="@id/register_agreement_dialog_content"
+
+            app:shape_solidColor="@color/FFE95929"
+            android:textColor="@color/white"
+                android:textSize="@dimen/sp_16"
+            android:textStyle="bold"
+            android:text="@string/register_agree"
+            android:gravity="center"
+app:shape_radius="@dimen/dp_20"
+            android:paddingVertical="@dimen/dp_10"
+            android:layout_marginHorizontal="@dimen/dp_10"
+
+            />
+
+        <com.hjq.shape.view.ShapeTextView
+            android:id="@+id/register_agreement_dialog_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/register_agreement_dialog_ok"
+            app:layout_constraintEnd_toStartOf="@id/register_agreement_dialog_ok"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/register_agreement_dialog_ok"
+            android:textColor="@color/FFE95929"
+            android:textSize="@dimen/sp_16"
+            android:textStyle="bold"
+            android:text="@string/register_disagree"
+            android:gravity="center"
+            app:shape_radius="@dimen/dp_20"
+            android:paddingVertical="@dimen/dp_10"
+
+            android:layout_marginHorizontal="@dimen/dp_10"
+            app:shape_strokeWidth="@dimen/dp_1"
+            app:shape_strokeColor="@color/FFE95929"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

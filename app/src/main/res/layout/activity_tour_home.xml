@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <include
+        android:id="@+id/titleBar"
+        layout="@layout/common_tool_bar" />
+
+
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleBar">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.utils.widget.ImageFilterView
+                    android:id="@+id/banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dp_15"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:adjustViewBounds="true"
+                    android:src="@mipmap/banner_tour_coupon1"
+                    app:round="@dimen/dp_8" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/tourCouponEnter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_17"
+                    android:background="@drawable/common_ffffff_8"
+
+                    android:paddingBottom="@dimen/dp_12"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/tv4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_10"
+                        android:layout_marginTop="@dimen/dp_16"
+                        android:drawablePadding="@dimen/dp_5"
+                        android:text="领券入口"
+                        android:textColor="#ff333333"
+                        android:textSize="@dimen/sp_16"
+                        android:textStyle="bold"
+                        app:drawableStartCompat="@mipmap/icon_tour_agency4"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_7"
+                        android:text="领券更优惠"
+                        android:textColor="#ff999999"
+                        android:textSize="@dimen/sp_13"
+                        app:layout_constraintBottom_toBottomOf="@id/tv4"
+                        app:layout_constraintStart_toEndOf="@id/tv4"
+                        app:layout_constraintTop_toTopOf="@id/tv4"
+
+                        />
+
+                    <com.angcyo.tablayout.DslTabLayout
+                        android:id="@+id/dslTabEnter"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_40"
+                        app:layout_constraintTop_toBottomOf="@id/tv4"
+                        app:tab_deselect_color="@color/FF666666"
+                        app:tab_draw_indicator="true"
+                        app:tab_enable_text_bold="true"
+
+
+                        app:tab_indicator_color="@color/FFE95929"
+                        app:tab_indicator_drawable="@drawable/common_ffffff_8"
+                        app:tab_indicator_enable_flow="true"
+                        app:tab_indicator_height="4dp"
+                        app:tab_indicator_style="STYLE_BOTTOM"
+                        app:tab_indicator_width="30dp"
+
+                        app:tab_item_auto_equ_width="false"
+                        app:tab_select_color="@color/FFE95929">
+
+
+                    </com.angcyo.tablayout.DslTabLayout>
+
+
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/dslVpEnter"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_122"
+
+                        app:layout_constraintTop_toBottomOf="@id/dslTabEnter" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/tourAgencyCl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_17"
+                    android:background="@drawable/common_ffffff_8"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/tv1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_10"
+                        android:layout_marginTop="@dimen/dp_16"
+                        android:drawablePadding="@dimen/dp_5"
+                        android:text="旅行社"
+                        android:textColor="#ff333333"
+                        android:textSize="@dimen/sp_16"
+                        android:textStyle="bold"
+                        app:drawableStartCompat="@mipmap/icon_tour_agency1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_7"
+                        android:text="出行旅游找我们"
+                        android:textColor="#ff999999"
+                        android:textSize="@dimen/sp_13"
+                        app:layout_constraintBottom_toBottomOf="@id/tv1"
+                        app:layout_constraintStart_toEndOf="@id/tv1"
+                        app:layout_constraintTop_toTopOf="@id/tv1"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/moreTourAgency"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dp_15"
+                        android:drawablePadding="@dimen/dp_3"
+                        android:text="全部旅行社"
+                        android:textColor="#ff999999"
+                        android:textSize="@dimen/sp_13"
+                        app:drawableEndCompat="@mipmap/icon_more"
+                        app:drawableTint="@color/FF999999"
+
+                        app:layout_constraintBottom_toBottomOf="@id/tv1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tv1" />
+
+
+                    <com.angcyo.tablayout.DslTabLayout
+                        android:id="@+id/dslTab"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_marginTop="@dimen/dp_6"
+                        app:layout_constraintTop_toBottomOf="@id/tv1"
+                        app:tab_enable_gradient_color="true"
+                        app:tab_indicator_color="@color/FFE95929"
+                        app:tab_indicator_drawable="@drawable/indicator_round_background_tran"
+                        app:tab_indicator_enable_flow="true"
+                        app:tab_indicator_height_offset="-6dp"
+                        app:tab_indicator_style="STYLE_CENTER"
+                        app:tab_indicator_width_offset="-6dp"
+                        app:tab_item_is_equ_width="false"
+                        app:tab_select_color="@color/white">
+
+
+                    </com.angcyo.tablayout.DslTabLayout>
+
+                    <androidx.viewpager2.widget.ViewPager2
+                        android:id="@+id/dslVp"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_400"
+                        app:layout_constraintTop_toBottomOf="@id/dslTab" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/tourStrategyCl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/dp_15">
+
+                    <TextView
+                        android:id="@+id/tv2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_10"
+                        android:layout_marginTop="@dimen/dp_16"
+                        android:drawablePadding="@dimen/dp_5"
+                        android:text="旅游攻略"
+                        android:textColor="#ff333333"
+                        android:textSize="@dimen/sp_16"
+                        android:textStyle="bold"
+                        app:drawableStartCompat="@mipmap/icon_tour_agency3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_7"
+                        android:text="带你玩转金华"
+                        android:textColor="#ff999999"
+                        android:textSize="@dimen/sp_13"
+                        app:layout_constraintBottom_toBottomOf="@id/tv2"
+                        app:layout_constraintStart_toEndOf="@id/tv2"
+                        app:layout_constraintTop_toTopOf="@id/tv2"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/moreTourStrategy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dp_15"
+                        android:drawablePadding="@dimen/dp_3"
+                        android:text="更多"
+                        android:textColor="#ff999999"
+                        android:textSize="@dimen/sp_13"
+                        app:drawableEndCompat="@mipmap/icon_more"
+                        app:drawableTint="@color/FF999999"
+
+                        app:layout_constraintBottom_toBottomOf="@id/tv2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tv2" />
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/tourStrategyRv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_15"
+                        app:layout_constraintTop_toBottomOf="@id/tv2" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/tourLineCl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_10"
+                        android:layout_marginTop="@dimen/dp_16"
+                        android:drawablePadding="@dimen/dp_5"
+                        android:text="网红路线"
+                        android:textColor="#ff333333"
+                        android:textSize="@dimen/sp_16"
+                        android:textStyle="bold"
+                        app:drawableStartCompat="@mipmap/icon_tour_agency2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_7"
+                        android:text="带你玩转美丽金华"
+                        android:textColor="#ff999999"
+                        android:textSize="@dimen/sp_13"
+                        app:layout_constraintBottom_toBottomOf="@id/tv3"
+                        app:layout_constraintStart_toEndOf="@id/tv3"
+                        app:layout_constraintTop_toTopOf="@id/tv3"
+
+                        />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/tourLineRv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/dp_8"
+                        app:layout_constraintTop_toBottomOf="@id/tv3"
+
+                        />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

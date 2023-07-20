@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/dp_15"
+    android:layout_marginTop="@dimen/dp_12"
+    android:background="@drawable/common_ffffff_8">
+
+
+    <TextView
+        android:id="@+id/orderNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="订单号:COV156545825445458652"
+        android:textColor="#ff666666"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/copyOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_8"
+        android:padding="@dimen/dp_3"
+        android:text="复制"
+        android:textColor="#ffe95929"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintBottom_toBottomOf="@id/orderNo"
+        app:layout_constraintStart_toEndOf="@id/orderNo"
+        app:layout_constraintTop_toTopOf="@id/orderNo" />
+
+    <TextView
+        android:id="@+id/orderState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:text="已取消"
+        android:textColor="#ff999999"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintBottom_toBottomOf="@id/orderNo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/orderNo"
+
+        />
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/storeHead"
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="@dimen/dp_60"
+        android:layout_marginTop="@dimen/dp_13"
+        android:scaleType="fitXY"
+        android:src="@mipmap/img_load_error"
+        app:layout_constraintStart_toStartOf="@id/orderNo"
+        app:layout_constraintTop_toBottomOf="@id/orderNo"
+        app:round="@dimen/dp_4" />
+
+    <TextView
+        android:id="@+id/storeName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_8"
+        android:textColor="#ff333333"
+        android:textSize="@dimen/sp_15"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/storeHead"
+        app:layout_constraintTop_toTopOf="@id/storeHead"
+        tools:text="阿萨大大"
+
+        />
+
+    <TextView
+        android:id="@+id/amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="￥100.99"
+        android:textColor="#ffe95929"
+        android:textSize="@dimen/sp_12"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/storeName"
+        app:layout_constraintTop_toBottomOf="@id/storeName"
+
+        />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0_5"
+        android:layout_marginHorizontal="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_15"
+        android:background="@color/FFE7E7E7"
+        app:layout_constraintTop_toBottomOf="@id/storeHead" />
+
+
+    <TextView
+        android:id="@+id/orderTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_15"
+        android:layout_marginBottom="@dimen/dp_17"
+        android:textColor="#ff666666"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/view1"
+        app:layout_constraintTop_toBottomOf="@id/view1"
+        tools:text="2023-01-30 15:23:56" />
+
+    <com.hjq.shape.view.ShapeTextView
+        android:id="@+id/cancelOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_15"
+        android:paddingHorizontal="@dimen/dp_11"
+        android:paddingVertical="@dimen/dp_3"
+        android:text="取消订单"
+        android:textColor="#ffffffff"
+        android:textSize="@dimen/sp_12"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/orderTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/orderTime"
+        app:shape_radius="@dimen/dp_11"
+        app:shape_solidColor="@color/FFE95929" />
+
+    <com.hjq.shape.view.ShapeTextView
+        android:id="@+id/payOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_15"
+        android:paddingHorizontal="@dimen/dp_11"
+        android:paddingVertical="@dimen/dp_3"
+        android:text="支付订单"
+        android:textColor="#ffffffff"
+        android:textSize="@dimen/sp_12"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/orderTime"
+        app:layout_constraintEnd_toStartOf="@id/cancelOrder"
+        app:layout_constraintTop_toTopOf="@id/orderTime"
+        app:shape_radius="@dimen/dp_11"
+        app:shape_solidColor="@color/FFE95929" />
+</androidx.constraintlayout.widget.ConstraintLayout>

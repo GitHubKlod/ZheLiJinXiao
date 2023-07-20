@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <include
+        android:id="@+id/titleBar"
+        layout="@layout/common_tool_bar" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/titleBar">
+
+        <com.hjq.shape.view.ShapeTextView
+            android:id="@+id/searchBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_19"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/dp_17"
+            android:paddingVertical="@dimen/dp_4"
+            android:text="搜索"
+            android:textColor="#ffffffff"
+            android:textSize="@dimen/sp_15"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shape_radius="@dimen/dp_16"
+            app:shape_solidColor="@color/FFE95929" />
+
+
+        <com.hjq.shape.view.ShapeEditText
+            android:id="@+id/searchContent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="@dimen/dp_8"
+            android:layout_marginStart="@dimen/dp_21"
+            android:layout_marginEnd="@dimen/dp_13"
+            android:layout_weight="1"
+            android:background="@null"
+            android:drawableStart="@mipmap/icon_search1"
+            android:drawablePadding="@dimen/dp_8"
+            android:gravity="center_vertical"
+            android:hint="请输入关键字"
+            android:imeOptions="actionSearch"
+            android:paddingHorizontal="@dimen/dp_15"
+
+            android:singleLine="true"
+            android:textSize="@dimen/sp_13"
+            app:layout_constraintBottom_toBottomOf="@id/searchBtn"
+            app:layout_constraintEnd_toStartOf="@id/searchBtn"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/searchBtn"
+            app:shape_radius="@dimen/dp_16"
+            app:shape_solidColor="@color/FFF3F3F3" />
+
+        <com.angcyo.tablayout.DslTabLayout
+            android:id="@+id/dslTab"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            app:layout_constraintTop_toBottomOf="@id/searchBtn"
+
+
+            app:tab_deselect_color="@color/FF666666"
+            app:tab_draw_indicator="true"
+            app:tab_enable_text_bold="true"
+
+            app:tab_indicator_color="@color/FFE95929"
+            app:tab_indicator_drawable="@drawable/common_ffffff_8"
+            app:tab_indicator_enable_flow="true"
+            app:tab_indicator_height="4dp"
+            app:tab_indicator_style="STYLE_BOTTOM"
+            app:tab_indicator_width="30dp"
+
+            app:tab_item_auto_equ_width="true"
+            app:tab_select_color="@color/FFE95929">
+
+            <TextView
+                style="@style/TabCommonItemStyle"
+                android:layout_marginHorizontal="10dp"
+                android:text="最新发布" />
+
+            <TextView
+                style="@style/TabCommonItemStyle"
+                android:layout_marginHorizontal="10dp"
+                android:text="最多关注" />
+
+
+            <TextView
+                style="@style/TabCommonItemStyle"
+                android:layout_marginHorizontal="10dp"
+                android:text="最新回复" />
+
+        </com.angcyo.tablayout.DslTabLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/dslVp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cl1" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

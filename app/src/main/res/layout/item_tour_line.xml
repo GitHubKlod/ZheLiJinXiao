@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/common_ffffff_8"
+    android:layout_marginHorizontal="@dimen/dp_4"
+    android:layout_marginTop="@dimen/dp_12">
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1"
+        tools:src="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+    app:round="8dp"
+        android:id="@+id/image"
+        />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:ellipsize="end"
+        android:maxLines="2"
+        tools:text="诗画浦江轻松休闲2日游攻略诗画浦江轻松休闲2日游攻略"
+        android:textColor="#ff333333"
+        android:textSize="13sp"
+
+        app:layout_constraintTop_toBottomOf="@id/image"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginHorizontal="@dimen/dp_8"
+        android:textStyle="bold"
+        android:id="@+id/title"
+        />
+    
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_8"
+        android:id="@+id/tagsRv"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        android:layout_marginTop="@dimen/dp_8"
+        android:nestedScrollingEnabled="false"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="￥277.00"
+        android:textColor="#ffff0101"
+        android:textSize="@dimen/sp_12"
+        android:id="@+id/price"
+        app:layout_constraintTop_toBottomOf="@id/tagsRv"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginVertical="@dimen/dp_15"
+        android:layout_marginStart="@dimen/dp_9"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="125人已下单"
+        android:textColor="#ff999999"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintTop_toTopOf="@id/price"
+        app:layout_constraintBottom_toBottomOf="@id/price"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        android:layout_marginEnd="@dimen/dp_6"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

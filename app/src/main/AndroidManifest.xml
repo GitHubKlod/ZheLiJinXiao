@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zhili.zljx">
+
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+<!--    存储权限适配-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32"
+        />
+    <!--用于写入缓存数据到扩展存储卡-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32"
+        />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32"
+        />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+
+    <!--AgentWeb 是默认允许定位的 ，如果你需要该功能 ， 请在你的 AndroidManifest 文件里面加入如下权限 。-->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <!--用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <!--用于访问GPS定位-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <!--用于获取运营商信息，用于支持提供运营商信息相关的接口-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!--用于访问wifi网络信息，wifi信息会用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <!--用于获取wifi的获取权限，wifi信息会用来进行网络定位-->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <!--用于读取手机当前的状态-->
+<!--    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>-->
+    <!--用于申请调用A-GPS模块-->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+    <!--如果设置了target >= 28 如果需要启动后台定位则必须声明这个权限-->
+<!--    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>-->
+    <!--如果您的应用需要后台定位权限，且有可能运行在Android Q设备上,并且设置了target>28，必须增加这个权限声明-->
+<!--    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>-->
+
+
+    <application
+        android:name=".app.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/icon_zljx"
+        android:label="${APP_NAME}"
+        android:roundIcon="@mipmap/icon_zljx"
+        android:supportsRtl="true"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:resizeableActivity="true"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/Theme.MyApplication">
+<!--        主页-->
+        <activity
+            android:name=".ui.home.MainActivity"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
+            android:exported="true">
+
+        </activity>
+<!--        启动页-->
+        <activity android:name=".ui.splash.SplashActivity"
+            android:exported="true"
+            android:theme="@style/LauncherTheme"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+<!--    FileProvider  适配存储  -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+<!--XXPermissions权限请求框架 声明已经适配存储权限-->
+        <meta-data
+            android:name="ScopedStorage"
+            android:value="true" />
+<!--请在application标签中声明service组件,每个app拥有自己单独的定位service。  高德定位服务-->
+        <service android:name="com.amap.api.location.APSService"/>
+<!--       //高德地图开发者申请的key-->
+        <meta-data android:name="com.amap.api.v2.apikey" android:value="0afb3c2f7e6a022a9a6490e5a5812413"/>
+
+
+
+
+<!--        activity 声明-->
+        <activity android:name=".ui.login.LoginActivity" />
+        <activity android:name=".ui.common.WebViewActivity" />
+        <activity android:name=".ui.home.mine.setting.SettingActivity" />
+        <activity android:name=".ui.home.mine.setting.RealNameActivity" />
+        <activity android:name=".ui.home.mine.setting.ChangePhoneActivity" />
+        <activity android:name=".ui.home.mine.coupons.CouponsActivity" />
+        <activity android:name=".ui.home.mine.account.MyAccountActivity" />
+        <activity android:name=".ui.common.HtmlTvActivity" />
+        <activity android:name=".ui.home.mine.record.make.MakeRecordActivity" />
+        <activity android:name=".ui.home.mine.order.writeoff.WriteOffOrderActivity" />
+        <activity android:name=".ui.home.mine.order.tour.TourOrderActivity" />
+        <activity android:name=".ui.home.mine.order.detail.WriteOffOrderDetailActivity" />
+        <activity android:name=".ui.home.mine.order.detail.TourOrderDetailActivity" />
+        <activity android:name=".ui.home.mine.tour.TourHomeActivity" />
+        <activity android:name=".ui.home.article.ArticleDetailActivity" />
+        <activity android:name=".ui.home.article.GroupDetailActivity" />
+        <activity android:name=".ui.home.activity.location.LocationSelectActivity" />
+        <activity android:name=".ui.home.search.GroupSearchActivity" />
+        <activity android:name=".ui.home.mine.setting.PushSwitchActivity" />
+        <activity android:name=".ui.home.mine.setting.AboutUsActivity" />
+        <activity android:name=".ui.home.mine.tour.TourAgencyActivity" />
+        <activity android:name=".ui.home.mine.tour.AgencyDetailActivity" />
+        <activity android:name=".ui.home.mine.account.address.MyAddressActivity" />
+        <activity android:name=".ui.home.mine.account.bank.MyBankCardActivity" />
+        <activity android:name=".ui.home.mine.account.bank.AddCardActivity" />
+
+
+    </application>
+
+</manifest>

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/dp_15"
+    android:layout_marginTop="@dimen/dp_15"
+    android:background="@drawable/common_ffffff_8"
+    android:paddingBottom="@dimen/dp_15">
+
+
+    <com.hjq.shape.view.ShapeTextView
+        android:id="@+id/companyName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/dp_10"
+        android:paddingVertical="@dimen/dp_4"
+        android:textColor="#ffffffff"
+        android:textSize="@dimen/sp_12"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shape_bottomRightRadius="8dp"
+        app:shape_solidColor="@color/FFE95929"
+        app:shape_topLeftRadius="8dp"
+        tools:text="贝佳口腔医院恭贺您中奖" />
+
+
+    <com.hjq.shape.layout.ShapeConstraintLayout
+        android:id="@+id/cl1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_15"
+        app:layout_constraintTop_toBottomOf="@id/companyName"
+        app:shape_radius="@dimen/dp_3"
+        app:shape_solidColor="#FFF4F0"
+
+        >
+
+        <ImageView
+            android:id="@+id/rmbHead"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            android:layout_margin="@dimen/dp_8"
+            android:src="@mipmap/icon_invent_rmb"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:adjustViewBounds="true"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+
+            android:id="@+id/rmbName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_11"
+            android:textColor="#ff333333"
+            android:textSize="@dimen/sp_16"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/rmbHead"
+            app:layout_constraintTop_toTopOf="@id/rmbHead"
+            app:layout_constraintEnd_toStartOf="@id/ll1"
+
+            tools:text="招商银行50元数币红包"
+
+            />
+
+        <TextView
+            android:id="@+id/rmbSill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffe95929"
+            android:textSize="@dimen/sp_12"
+            app:layout_constraintStart_toStartOf="@id/rmbName"
+            app:layout_constraintTop_toBottomOf="@id/rmbName"
+            tools:text="无门槛"
+app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <LinearLayout
+            android:id="@+id/ll1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_15"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¥"
+                android:textColor="#ffff512f"
+                android:textSize="@dimen/sp_12"
+                android:textStyle="bold"
+
+                />
+
+            <TextView
+                android:id="@+id/rmbAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffff512f"
+                android:textSize="@dimen/sp_24"
+                android:textStyle="bold"
+                tools:text="50" />
+
+        </LinearLayout>
+
+    </com.hjq.shape.layout.ShapeConstraintLayout>
+
+    <Space
+        android:id="@+id/sp1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/cl1"
+        app:layout_constraintEnd_toEndOf="@id/cl1"
+        app:layout_constraintTop_toTopOf="@id/cl1" />
+
+    <ImageView
+        android:id="@+id/stateImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_6"
+        android:src="@mipmap/img_coupons_type4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sp1"
+        app:layout_constraintVertical_bias="1" />
+
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_0_5"
+        android:layout_marginTop="@dimen/dp_15"
+        android:background="@color/FFEDEDED"
+        app:layout_constraintEnd_toEndOf="@id/cl1"
+        app:layout_constraintStart_toStartOf="@id/cl1"
+        app:layout_constraintTop_toBottomOf="@id/cl1"
+
+        />
+
+    <TextView
+        android:id="@+id/rmbTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_14"
+        android:textColor="#ff666666"
+        android:textSize="@dimen/sp_13"
+        app:layout_constraintStart_toStartOf="@id/view1"
+        app:layout_constraintTop_toBottomOf="@id/view1"
+        tools:text="2023-03-31 23:59到期" />
+
+
+    <ImageView
+        android:id="@+id/rmbMoreIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:rotation="0"
+        android:src="@mipmap/icon_pull_down"
+        app:layout_constraintBottom_toBottomOf="@id/rmbTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/rmbTime" />
+
+    <TextView
+        android:id="@+id/rmbMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_5"
+        android:text="使用说明"
+        android:textColor="#ff666666"
+        android:textSize="@dimen/sp_13"
+        app:layout_constraintBottom_toBottomOf="@id/rmbTime"
+        app:layout_constraintEnd_toStartOf="@id/rmbMoreIcon"
+        app:layout_constraintTop_toTopOf="@id/rmbTime" />
+
+
+    <TextView
+        android:id="@+id/rmbDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_14"
+        android:textColor="#ff999999"
+        android:textSize="@dimen/sp_13"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/rmbTime"
+        tools:text="使用范围：在市区注册登记的限额以上商超、限额以上住宿企业（仅限 餐饮消费）、限额以上餐饮企业。
+使用规则：每满 100 元抵用一张，允许叠加使用，不找零，活动结束未 使用，自动失效。" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

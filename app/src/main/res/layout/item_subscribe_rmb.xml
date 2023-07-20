@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="@dimen/dp_10"
+    android:layout_marginHorizontal="@dimen/dp_12"
+    android:background="@drawable/common_ffffff_8">
+
+
+    <com.hjq.shape.view.ShapeTextView
+        android:id="@+id/runTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="4月1日 10:00 开奖"
+        android:textColor="#ffe95929"
+        android:textSize="@dimen/sp_13"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="@dimen/dp_12"
+        app:shape_solidColor="@color/FFFFF2EC"
+        app:shape_strokeWidth="@dimen/dp_1"
+        app:shape_strokeColor="@color/FFE95929"
+        android:paddingVertical="@dimen/dp_6"
+        android:paddingHorizontal="@dimen/dp_12"
+        app:shape_radius="@dimen/dp_18"/>
+
+
+    <TextView
+        android:id="@+id/couponState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="待开奖"
+        android:textColor="#ff3388ff"
+        android:textSize="14sp"
+        app:layout_constraintTop_toTopOf="@id/runTime"
+        app:layout_constraintBottom_toBottomOf="@id/runTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/dp_12"
+        android:textStyle="bold"
+        />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_0_5"
+        android:background="@color/FFCCCCCC"
+        app:layout_constraintTop_toBottomOf="@id/runTime"
+        android:layout_marginTop="@dimen/dp_12"
+        app:layout_constraintStart_toStartOf="@id/runTime"
+        app:layout_constraintEnd_toEndOf="@id/couponState"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/view1"
+        android:paddingBottom="@dimen/dp_18"
+        android:layout_height="wrap_content">
+        <com.zhili.zljx.widget.view.KeyValueLayout
+            android:id="@+id/activityName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/view1"
+            app:klod_key="活动轮次:"
+            app:klod_key_color="@color/FF999999"
+            app:klod_key_size="@dimen/sp_14"
+            tools:klod_value="活动名称:"
+            app:klod_value_color="@color/FF333333"
+            app:klod_value_size="@dimen/sp_14"
+            />
+        <com.zhili.zljx.widget.view.KeyValueLayout
+            android:id="@+id/activityRound"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/view1"
+            app:klod_key="活动名称:"
+            app:klod_key_color="@color/FF999999"
+            app:klod_key_size="@dimen/sp_14"
+            tools:klod_value="活动名称:"
+            app:klod_value_color="@color/FF333333"
+            app:klod_value_size="@dimen/sp_14"
+
+            />
+        <com.zhili.zljx.widget.view.KeyValueLayout
+            android:id="@+id/subscribeCity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/view1"
+            app:klod_key="预约城市:"
+            app:klod_key_color="@color/FF999999"
+            app:klod_key_size="@dimen/sp_14"
+            tools:klod_value="活动名称:"
+            app:klod_value_color="@color/FF333333"
+            app:klod_value_size="@dimen/sp_14"
+
+            />
+        <com.zhili.zljx.widget.view.KeyValueLayout
+            android:id="@+id/realName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/view1"
+            app:klod_key="真实姓名:"
+            app:klod_key_color="@color/FF999999"
+            app:klod_key_size="@dimen/sp_14"
+            tools:klod_value="活动名称:"
+            app:klod_value_color="@color/FF333333"
+            app:klod_value_size="@dimen/sp_14"
+
+            />
+        <com.zhili.zljx.widget.view.KeyValueLayout
+            android:id="@+id/cardId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/view1"
+            app:klod_key="身份证号:"
+            app:klod_key_color="@color/FF999999"
+            app:klod_key_size="@dimen/sp_14"
+            tools:klod_value="活动名称:"
+            app:klod_value_color="@color/FF333333"
+            app:klod_value_size="@dimen/sp_14"
+
+            />
+        <com.zhili.zljx.widget.view.KeyValueLayout
+            android:id="@+id/phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/view1"
+            app:klod_key="手机号码:"
+            app:klod_key_color="@color/FF999999"
+            app:klod_key_size="@dimen/sp_14"
+            tools:klod_value="活动名称:"
+            app:klod_value_color="@color/FF333333"
+            app:klod_value_size="@dimen/sp_14"
+
+            />
+        <com.zhili.zljx.widget.view.KeyValueLayout
+            android:id="@+id/subscribeTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/view1"
+            app:klod_key="预约时间:"
+            app:klod_key_color="@color/FF999999"
+            app:klod_key_size="@dimen/sp_14"
+            tools:klod_value="活动名称:"
+            app:klod_value_color="@color/FF333333"
+            app:klod_value_size="@dimen/sp_14"
+
+            />
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/dp_11"
+    android:layout_marginTop="@dimen/dp_9"
+    android:background="@drawable/common_ffffff_8">
+    <!--    android:background="@drawable/common_8_ffffff"-->
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/groupImg"
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="@dimen/dp_60"
+
+        android:layout_margin="@dimen/dp_10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="center"
+        app:round="@dimen/dp_5"
+        tools:src="@mipmap/img_load_error" />
+
+    <TextView
+        android:id="@+id/groupTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_9"
+        android:layout_marginTop="@dimen/dp_6"
+        android:drawablePadding="@dimen/dp_4"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:textColor="#ff333333"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:drawableStartCompat="@mipmap/icon_group_item_ic1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/groupImg"
+        app:layout_constraintTop_toTopOf="@id/groupImg"
+        tools:text="商家如何入驻浙里金消商家如何入驻浙里金消商家如何入驻浙里金消" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_14"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/groupTitle"
+        app:layout_constraintTop_toBottomOf="@id/groupTitle">
+
+        <com.zhili.zljx.widget.view.CornerImageView
+            android:id="@+id/groupHeader1"
+            android:layout_width="@dimen/dp_19"
+            android:layout_height="@dimen/dp_19"
+
+            android:src="@mipmap/ic_header_default"
+            app:borderColorYL="@color/white"
+            app:borderWidthYL="@dimen/dp_2"
+            app:radiusYL="@dimen/dp_10"
+            android:visibility="gone"
+
+            />
+
+        <com.zhili.zljx.widget.view.CornerImageView
+            android:id="@+id/groupHeader2"
+            android:layout_width="@dimen/dp_19"
+            android:layout_height="@dimen/dp_19"
+
+            android:layout_marginStart="-7dp"
+            android:src="@mipmap/ic_header_default"
+            app:borderColorYL="@color/white"
+            app:borderWidthYL="@dimen/dp_2"
+            app:radiusYL="@dimen/dp_10"
+            android:visibility="gone"
+
+            />
+
+        <com.zhili.zljx.widget.view.CornerImageView
+            android:id="@+id/groupHeader3"
+            android:layout_width="@dimen/dp_19"
+            android:layout_height="@dimen/dp_19"
+
+            android:layout_marginStart="-7dp"
+            android:src="@mipmap/ic_header_default"
+            app:borderColorYL="@color/white"
+            app:borderWidthYL="@dimen/dp_2"
+            android:visibility="gone"
+
+            app:radiusYL="@dimen/dp_10" />
+
+        <ImageView
+            android:id="@+id/groupHeaderMore"
+            android:layout_width="@dimen/dp_19"
+            android:layout_height="@dimen/dp_19"
+            android:layout_marginStart="-7dp"
+            android:visibility="gone"
+            android:src="@mipmap/icon_group_item_more" />
+
+        <TextView
+            android:id="@+id/groupNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_3"
+            android:layout_weight="1"
+            android:textColor="#ff999999"
+            android:textSize="@dimen/sp_12"
+            tools:text="1.4k人关注了话题" />
+
+
+        <com.hjq.shape.view.ShapeTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/dp_14"
+            android:paddingVertical="@dimen/dp_2"
+            android:text="参与"
+            android:textColor="#ffffffff"
+            android:textSize="@dimen/sp_13"
+            app:shape="rectangle"
+            app:shape_radius="@dimen/dp_12"
+            app:shape_solidColor="@color/FFFF4424"
+
+            />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0_5"
+        android:layout_marginStart="@dimen/dp_11"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_20"
+        app:layout_constraintTop_toBottomOf="@id/groupImg" />
+
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/groupUpHeader"
+        android:layout_width="@dimen/dp_20"
+        android:layout_height="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_8"
+        app:layout_constraintStart_toStartOf="@id/groupImg"
+        app:layout_constraintTop_toBottomOf="@id/view1"
+        app:round="@dimen/dp_10"
+        tools:src="@mipmap/ic_header_default"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/dp_10"
+        />
+
+    <TextView
+        android:id="@+id/groupUpName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="浙里金消小助手"
+        android:textColor="#ff666666"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintTop_toTopOf="@id/groupUpHeader"
+        app:layout_constraintBottom_toBottomOf="@id/groupUpHeader"
+        app:layout_constraintStart_toEndOf="@id/groupUpHeader"
+        android:layout_marginStart="@dimen/dp_5"
+
+        />
+
+    <TextView
+        android:id="@+id/upTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="创建于:2023-01-29 15:30:23"
+        android:textColor="#ff999999"
+        android:textSize="@dimen/sp_10"
+        app:layout_constraintTop_toTopOf="@id/groupUpHeader"
+        app:layout_constraintBottom_toBottomOf="@id/groupUpHeader"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/dp_9"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
